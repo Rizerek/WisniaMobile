@@ -15,4 +15,19 @@ public class Client {
         this.surname = surname;
         this.pesel = pesel;
     }
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getId() {
+        return id;
+    }
 }

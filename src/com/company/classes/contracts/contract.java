@@ -8,8 +8,11 @@ import java.time.MonthDay;
 import java.util.Date;
 
 public class contract {
+    private Integer id;
     private Client client;
     private Tariff tariff;
     private Date endDate;
     private MonthDay regulationDay;
+
+
 }
