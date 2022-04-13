@@ -20,7 +20,7 @@ public class Tariff {
         this.duration = duration;
         this.smsPhone = smsPhone;
     }
-    public Integer getPrice()
+    public Integer getId()
     {
         return id;
     }
