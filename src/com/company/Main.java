@@ -12,8 +12,9 @@ public class Main {
             "(ID INT PRIMARY KEY ," +
             " NAME VARCHAR(50), " +
             " SURNAME VARCHAR(50), " +
-            " PHONE VARCHAR(50)); ";
-    public static final String insert = "INSERT INTO users_aCichy VALUES(1,'antoni','cichy','111111111');";
+            " PHONE VARCHAR(50)); "+
+            " PESEL VARCHAR(50)); ";
+    public static String insert = "INSERT INTO users_aCichy VALUES(1,'antoni','cichy','111111111','81010200131');";
 
     public static void main(String[] args) {
         Connection connection = null;
@@ -33,6 +34,8 @@ public class Main {
             st.execute(createTableSQL);
             st.execute(insert);
 
+
+
             ResultSet rs = st.executeQuery(
                     "select surname,classid from users_aCichy ");
             while (rs.next()) {
@@ -45,5 +48,28 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e);
         }
+
     }
+
+    public void AddClientt(int id,String name, String surname, int phone,int pesel) {
+        try {
+            Class.forName("org.postgresql.Driver");
+
+            String user = "postgres";
+            String pass = "1dQxvBLTEpKTfgxQGD5FN";
+            Properties props = new Properties();
+            props.setProperty("user", user);
+            props.setProperty("password", pass);
+            String url = "jdbc:postgresql://msz-test.chq8qedm9jee.eu-west-1.rds.amazonaws.com/postgres";
+            Connection con = DriverManager.getConnection(url, props);
+            Statement st = con.createStatement();
+            insert = "INSERT INTO users_aCichy VALUES(id,name,surname,phone,pesel);";
+            st.execute(insert);
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
 }
+
