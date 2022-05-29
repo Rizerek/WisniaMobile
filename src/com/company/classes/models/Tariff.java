@@ -10,6 +10,7 @@ public class Tariff {
     private Integer duration;
     private smsPhone smsPhone;
 
+
     public Tariff() {
     }
 
