@@ -24,6 +24,8 @@ public class AddClient extends Main {
         this.pesel = pesel;
         this.addClients = addClients;
     }
+
+    //dodanie klienta
     public void Add()
     {
         AddClientt(id, name,surname,phone,pesel);
@@ -31,7 +33,7 @@ public class AddClient extends Main {
 
 
 
-    public List<AddClient> getAddClients() {
+    public List<AddClient> getAddedClients() {
         return addClients;
     }
 
